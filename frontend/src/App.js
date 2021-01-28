@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Sidebar } from "./components/Sidebar/Sidebar";
+import { Sidebar } from "./components/SideBar/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {Offer} from './components/Pages/Offer'
 
@@ -8,7 +8,7 @@ import {Offer} from './components/Pages/Offer'
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {products: [], filteredProducts}
+    this.state = {products: []}
   }
   render(){
     return (
