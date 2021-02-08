@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser'); 
 const cookieParser = require('cookie-parser')
 const expressValidator = require('express-validator')
+const path = require("path");
 const cors = require('cors');
 require('dotenv').config()
 
@@ -40,6 +41,27 @@ app.use("/api",categoryRoutes);
 app.use("/api",serviceRoutes);
 app.use("/api",brainTreeRoutes);
 app.use("/api",orderRoutes);
+
+// const __dirname = path.resolve();
+// app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
+
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "/frontend/build")));
+
+//   app.get("*", (req, res) =>
+//     res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"))
+//   );
+// } else {
+//   app.get("/", (req, res) => {
+//     res.send("API is running....");
+//   });
+// }
+
+app.use(express.static(path.join(__dirname, "/frontend/build")));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/frontend/build/index.html'));
+});
 
 const port = process.env.PORT || 8000
 
