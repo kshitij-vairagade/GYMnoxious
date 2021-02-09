@@ -2,7 +2,7 @@
   "name": "gymnoxious",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node backend/app",
     "server": "nodemon backend/server",
