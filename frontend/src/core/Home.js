@@ -42,7 +42,7 @@ const Home = () => {
       className="container-fluid"
     >
       <Search />
-      <h2 className="mb-4">New Gyms</h2>
+      <h2 className="mb-4 gym">New Gyms</h2>
             <div className="row">
                 {servicesByArrival.map((service, i) => (
                     <div key={i} className="col-4 mb-3">

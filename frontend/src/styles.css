@@ -8,8 +8,10 @@
      border-radius: 0px;
  }
 
+body{
+    background-image: url()
+}
 
- 
  /* cart badge */
  
  .cart-badge,
