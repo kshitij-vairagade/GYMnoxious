@@ -4,7 +4,8 @@
   "description": "Gymnosious is a web app where user will be able to chose gym offers and membership",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Sumit",
   "license": "ISC",
